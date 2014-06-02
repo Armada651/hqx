@@ -24,6 +24,9 @@
 
 #include <stdint.h>
 
+#if defined(_WIN32)
+    #define inline __inline
+#endif
 
 extern inline uint32_t rgb_to_yuv(uint32_t c);
 
