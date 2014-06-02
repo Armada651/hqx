@@ -78,6 +78,12 @@ static inline uint32_t Interpolate_3(uint32_t c1, int w1, uint32_t c2, int w2, u
         ((((c1 & MASK_13) * w1 + (c2 & MASK_13) * w2 + (c3 & MASK_13) * w3) >> s) & MASK_13);
 }
 
+
+static inline void Interp0(uint32_t * pc, uint32_t c1)
+{
+    *pc = c1;
+}
+
 static inline void Interp1(uint32_t * pc, uint32_t c1, uint32_t c2)
 {
     //*pc = (c1*3+c2) >> 2;

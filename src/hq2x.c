@@ -22,7 +22,7 @@
 #include "common.h"
 #include "hqx.h"
 
-#define PIXEL00_0     *dp = w[5];
+#define PIXEL00_0     Interp0(dp, w[5]);
 #define PIXEL00_10    Interp1(dp, w[5], w[1]);
 #define PIXEL00_11    Interp1(dp, w[5], w[4]);
 #define PIXEL00_12    Interp1(dp, w[5], w[2]);
@@ -34,7 +34,7 @@
 #define PIXEL00_70    Interp7(dp, w[5], w[4], w[2]);
 #define PIXEL00_90    Interp9(dp, w[5], w[4], w[2]);
 #define PIXEL00_100   Interp10(dp, w[5], w[4], w[2]);
-#define PIXEL01_0     *(dp+1) = w[5];
+#define PIXEL01_0     Interp0(dp+1, w[5]);
 #define PIXEL01_10    Interp1(dp+1, w[5], w[3]);
 #define PIXEL01_11    Interp1(dp+1, w[5], w[2]);
 #define PIXEL01_12    Interp1(dp+1, w[5], w[6]);
@@ -46,7 +46,7 @@
 #define PIXEL01_70    Interp7(dp+1, w[5], w[2], w[6]);
 #define PIXEL01_90    Interp9(dp+1, w[5], w[2], w[6]);
 #define PIXEL01_100   Interp10(dp+1, w[5], w[2], w[6]);
-#define PIXEL10_0     *(dp+dpL) = w[5];
+#define PIXEL10_0     Interp0(dp+dpL, w[5]);
 #define PIXEL10_10    Interp1(dp+dpL, w[5], w[7]);
 #define PIXEL10_11    Interp1(dp+dpL, w[5], w[8]);
 #define PIXEL10_12    Interp1(dp+dpL, w[5], w[4]);
@@ -58,7 +58,7 @@
 #define PIXEL10_70    Interp7(dp+dpL, w[5], w[8], w[4]);
 #define PIXEL10_90    Interp9(dp+dpL, w[5], w[8], w[4]);
 #define PIXEL10_100   Interp10(dp+dpL, w[5], w[8], w[4]);
-#define PIXEL11_0     *(dp+dpL+1) = w[5];
+#define PIXEL11_0     Interp0(dp+dpL+1, w[5]);
 #define PIXEL11_10    Interp1(dp+dpL+1, w[5], w[9]);
 #define PIXEL11_11    Interp1(dp+dpL+1, w[5], w[6]);
 #define PIXEL11_12    Interp1(dp+dpL+1, w[5], w[8]);
