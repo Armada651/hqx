@@ -52,4 +52,8 @@ HQX_API void HQX_CALLCONV hq2x_32_rb( uint32_t * src, uint32_t src_rowBytes, uin
 HQX_API void HQX_CALLCONV hq3x_32_rb( uint32_t * src, uint32_t src_rowBytes, uint32_t * dest, uint32_t dest_rowBytes, int width, int height );
 HQX_API void HQX_CALLCONV hq4x_32_rb( uint32_t * src, uint32_t src_rowBytes, uint32_t * dest, uint32_t dest_rowBytes, int width, int height );
 
+HQX_API void HQX_CALLCONV hq2x_32_lut( int pattern, uint32_t * dp, int dpL, const uint32_t w[10] );
+HQX_API void HQX_CALLCONV hq3x_32_lut( int pattern, uint32_t * dp, int dpL, const uint32_t w[10] );
+HQX_API void HQX_CALLCONV hq4x_32_lut( int pattern, uint32_t * dp, int dpL, const uint32_t w[10] );
+
 #endif
